@@ -13,16 +13,11 @@ def solution(S):
         else:
             if not bracketIndex:
                 return 0
-            # if previous number is also negative then check if a positive one exists in the index
-            if bracketIndex[-1] < 0:
-                if closedBrackets.index(currentBracket)+1 not in bracketIndex: return 0
-                bracketIndex.append(-1*(closedBrackets.index(currentBracket)+1))
-            else:
-                if bracketIndex[-1] - (closedBrackets.index(currentBracket)+1) != 0: return 0
-                bracketIndex.append(-1*(closedBrackets.index(currentBracket)+1))
+            if bracketIndex[-1] - (closedBrackets.index(currentBracket)+1) != 0: return 0
+            bracketIndex.pop()
 
-    if sum(bracketIndex) != 0: return 0
+    if len(bracketIndex) != 0: return 0
     return 1
 
 #CODILITY URL
-#https://app.codility.com/demo/results/training5DDGWC-94Y/
+#https://app.codility.com/demo/results/trainingSQB42B-4XQ/
