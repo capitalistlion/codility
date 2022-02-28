@@ -1,3 +1,3 @@
 git add .
-git commit -m "add comments"
+git commit -m "add Triangle"
 git push
