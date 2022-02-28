@@ -7,6 +7,9 @@ import random
 def solution(A):
     # write your code in Python 3.6
     A.sort()
+    #multiply greatest 2 negative numbers with largest positive number
+    #multiply greatest 3 largest positive numbers
+    #compare the 2
     return max(A[0]*A[1]*A[-1], A[-1]*A[-2]*A[-3])
 
 A = []
