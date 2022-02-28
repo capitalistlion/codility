@@ -1,3 +1,3 @@
 git add .
-git commit -m "add NumberOfDiscIntersections"
+git commit -m "add Brackets with score 62"
 git push
